@@ -5,3 +5,4 @@ SELECT
         'não incluído') AS 'Status Inclusão'
 FROM
     hr.countries;
+    

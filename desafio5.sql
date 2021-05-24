@@ -5,5 +5,4 @@ SELECT
   ROUND(MAX_SALARY / 12, 2) as 'Média máxima mensal'
 FROM
   hr.jobs
-GROUP BY `Cargo`
 ORDER BY `Variação Salarial` ASC, `Cargo` ASC;

@@ -9,5 +9,5 @@ SELECT
     END AS 'Nível'
 FROM
     hr.jobs AS jobs
-GROUP BY jobs.JOB_TITLE
-ORDER BY jobs.JOB_TITLE;
+GROUP BY `Cargo`, `Nível`
+ORDER BY `Cargo`;

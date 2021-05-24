@@ -7,4 +7,4 @@ WHEN E.SALARY BETWEEN 20001 AND 30000 THEN 'Alto'
 WHEN E.SALARY > 30000 THEN 'Altíssimo'
 END AS 'Nível'
 FROM hr.jobs AS J
-INNER JOIN hr.employees AS E
+INNER JOIN hr.employees AS E;

@@ -3,4 +3,4 @@ SELECT
 FROM
     hr.employees
 INNER JOIN
-	hr.jobs ON employees.JOB_ID = jobs.JOB_ID
+hr.jobs ON employees.JOB_ID = jobs.JOB_ID

@@ -7,7 +7,7 @@ WHERE
     EXISTS( SELECT
             *
         FROM
-            order_details AS d
+            w3schools.order_details AS d
         WHERE
             d.ProductID = p.ProductID
         HAVING d.Quantity > 80)

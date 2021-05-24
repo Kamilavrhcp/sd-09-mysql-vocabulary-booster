@@ -5,9 +5,9 @@ SELECT
     MAX(Quantity) as Máxima,
     ROUND(AVG(Quantity), 2) AS Média
 FROM
-    products AS p
+    w3schools.products AS p
         INNER JOIN
-    order_details AS o ON p.ProductID = o.ProductID
+    w3schools.order_details AS o ON p.ProductID = o.ProductID
 GROUP BY Produto
 HAVING `Média` > 20
 ORDER BY Média, Produto;

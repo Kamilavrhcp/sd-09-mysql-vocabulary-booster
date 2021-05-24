@@ -1,6 +1,6 @@
 SELECT    jobs.JOB_TITLE AS 'Cargo',
           ROUND(AVG(employees.SALARY), 2) AS 'Média salarial',
- CASE
+  CASE
     WHEN  AVG(employees.SALARY) BETWEEN 2000 AND 5800 THEN 'Júnior'
     WHEN  AVG(employees.SALARY) < 7500 THEN 'Pleno'
     WHEN  AVG(employees.SALARY) < 10500 THEN 'Sênior'

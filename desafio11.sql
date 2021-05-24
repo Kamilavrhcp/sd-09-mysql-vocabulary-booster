@@ -4,5 +4,5 @@ COUNT(t2.Country) AS `Número de compatriotas`
 FROM w3schools.customers AS t1
 JOIN w3schools.customers AS t2
 ON t1.Country = t2.Country AND t1.CustomerID <> t2.CustomerID
-GROUP BY t1.ContactName
+GROUP BY t1.ContactName, t1.Country
 ORDER BY t1.ContactName ASC;

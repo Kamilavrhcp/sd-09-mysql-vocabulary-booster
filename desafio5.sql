@@ -1,7 +1,3 @@
-SELECT * FROM hr.jobs;
-SELECT * FROM hr.employees;
-SELECT * FROM hr.job_history;
-
 SELECT 
     J.JOB_TITLE AS Cargo,
     (J.MAX_SALARY - J.MIN_SALARY) AS `Variação Salarial`,

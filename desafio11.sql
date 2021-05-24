@@ -5,4 +5,5 @@ SELECT
 FROM w3schools.customers AS C1
 INNER JOIN w3schools.customers AS C2 ON C2.Country = C1.Country
 GROUP BY C1.`ContactName`, C1.`Country`
+HAVING (COUNT(C1.`Country`) - 1) != 0
 ORDER BY C1.`ContactName` ASC;

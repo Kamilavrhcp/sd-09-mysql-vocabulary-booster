@@ -6,4 +6,4 @@ from w3schools.order_details as od
 inner join w3schools.products as pr on pr.ProductID = od.ProductID
 group by od.ProductID
 having round(avg(od.Quantity),2) > 20.00
-order by round(avg(od.Quantity),2), 'Produto';
+order by `Média`, `Produto`;

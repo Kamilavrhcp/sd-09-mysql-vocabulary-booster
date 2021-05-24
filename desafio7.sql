@@ -1,8 +1,8 @@
 SELECT 
-	jh.START_DATE AS 'Data de início',
+    jh.START_DATE AS 'Data de início',
     UCASE(CONCAT(employees.FIRST_NAME,
-            ' ',
-            employees.LAST_NAME)) AS `Nome completo`,
+                    ' ',
+                    employees.LAST_NAME)) AS `Nome completo`,
     employees.SALARY AS 'Salário'
 FROM
     hr.job_history AS jh

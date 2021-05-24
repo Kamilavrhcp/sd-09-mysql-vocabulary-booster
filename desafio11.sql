@@ -10,6 +10,5 @@ SELECT
                 AND w3schools.customers.ContactName <> Nome) AS `Número de compatriotas`
 FROM
     w3schools.customers AS customers
-HAVING 
-	`Número de compatriotas` <> '0'
+HAVING 	`Número de compatriotas` <> '0'
 ORDER BY Nome;

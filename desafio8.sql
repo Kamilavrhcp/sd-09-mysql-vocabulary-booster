@@ -1,11 +1,11 @@
 SELECT
-	w3schools.customers.contactName AS 'Nome de contato',
-    w3schools.shippers.ShipperName AS 'Empresa que fez o envio',
-    w3schools.orders.OrderDate AS 'Data do pedido'
+w3schools.customers.contactName AS 'Nome de contato',
+w3schools.shippers.ShipperName AS 'Empresa que fez o envio',
+w3schools.orders.OrderDate AS 'Data do pedido'
 FROM
-	w3schools.customers,
-    w3schools.shippers,
-    w3schools.orders
+w3schools.customers,
+w3schools.shippers,
+w3schools.orders
 WHERE
 	w3schools.customers.CustomerID = w3schools.orders.CustomerID
     AND

@@ -7,3 +7,4 @@ FROM
     w3schools.orders AS O ON O.EmployeeID = E.EmployeeID
 GROUP BY `Nome completo`
 ORDER BY `Total de pedidos` ASC;
+

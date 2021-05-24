@@ -10,3 +10,4 @@ FROM
 GROUP BY `Produto`
 HAVING `Média` > 20
 ORDER BY `Média` ASC , `Produto` ASC;
+

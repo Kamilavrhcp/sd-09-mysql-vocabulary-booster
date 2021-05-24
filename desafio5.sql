@@ -6,3 +6,4 @@ SELECT
 FROM
     hr.jobs
 ORDER BY `Variação Salarial` ASC, JOB_TITLE ASC;
+

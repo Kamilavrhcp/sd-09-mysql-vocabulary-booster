@@ -12,5 +12,5 @@ FROM
     hr.employees AS employ
         INNER JOIN
     hr.jobs AS jobs ON jobs.JOB_ID = employ.JOB_ID
-GROUP BY jobs.JOB_TITLE
-ORDER BY 'Senioridade' , jobs.JOB_TITLE;
+GROUP BY `Cargo`, `Média salarial`
+ORDER BY `Senioridade` , `Cargo`;

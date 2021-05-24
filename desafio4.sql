@@ -1,4 +1,4 @@
-SELECT j.job_title AS 'Cargo', FORMAT(AVG(e.salary), 2) AS `Média salarial`,
+SELECT j.job_title AS 'Cargo', REPLACE(FORMAT(AVG(e.salary), 2), ',', '') AS `Média salarial`,
 CASE
 WHEN AVG(e.salary) BETWEEN 2000 AND 5800 THEN 'Júnior'
 WHEN AVG(e.salary) BETWEEN 5801 AND 7500 THEN 'Pleno'
@@ -8,4 +8,4 @@ END AS `Senioridade`
 FROM hr.jobs AS j, hr.employees AS e
 WHERE e.job_id = j.job_id
 GROUP BY j.job_title
-ORDER BY `Média salarial` ASC, j.job_title ASC;
+ORDER BY AVG(e.salary) ASC, j.job_title ASC;

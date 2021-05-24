@@ -2,9 +2,9 @@ SELECT
     CONCAT(E.FirstName, ' ', E.LastName) AS 'Nome completo',
     OD.Quantity AS 'Total de pedidos'
 FROM
-    w3schools.order_details AS OD
+    w3schools.orders AS O
         INNER JOIN
-    w3schools.orders AS O ON OD.OrderID = O.OrderID
+    w3schools.order_details AS OD ON OD.OrderID = O.OrderID
         INNER JOIN
     w3schools.employees AS E ON O.EmployeeID = E.EmployeeID
 GROUP BY `Nome completo`

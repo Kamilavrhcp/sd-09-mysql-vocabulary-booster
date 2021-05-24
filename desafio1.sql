@@ -4,4 +4,4 @@ SELECT
 FROM
   hr.countries ct
   INNER JOIN hr.regions rg ON ct.REGION_ID = rg.REGION_ID
-ORDER BY ct.COUNTRY_NAME;
+ORDER BY ct.COUNTRY_NAME ASC;

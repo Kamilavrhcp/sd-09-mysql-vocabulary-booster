@@ -14,4 +14,3 @@ FROM
         INNER JOIN
     hr.jobs AS jobs ON jh.JOB_ID = jobs.JOB_ID
 ORDER BY `Nome completo` DESC , Cargo ASC;
-    

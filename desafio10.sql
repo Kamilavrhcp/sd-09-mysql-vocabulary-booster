@@ -8,5 +8,7 @@ WHERE
 p.ProductID = od.ProductID
 GROUP BY
 p.ProductName
+HAVING
+AVG(od.Quantity) > '20.00'
 ORDER BY
 AVG(od.Quantity) ASC, p.ProductName ASC;

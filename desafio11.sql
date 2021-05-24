@@ -1,8 +1,9 @@
 -- 11 - Exibe todas as pessoas clientes que possuem compatriotas, mostrando a quantidade de compatriotas para cada pessoa cliente
+
 SELECT 
     c1.ContactName AS Nome,
     c1.Country AS País,
-    COUNT(*) AS Número de compatriotas
+    COUNT(*) AS `Número de compatriotas`
 FROM
     w3schools.customers AS c1,
     w3schools.customers AS c2

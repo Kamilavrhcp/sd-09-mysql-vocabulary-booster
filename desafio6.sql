@@ -14,12 +14,3 @@ FROM
         AND JH.JOB_ID = J.JOB_ID
         AND D.DEPARTMENT_ID = JH.DEPARTMENT_ID
 ORDER BY `Nome completo` DESC , `Cargo` ASC;
-
-
-
--- 
--- SELECT * FROM hr.jobs;
--- SELECT * FROM hr.employees;
--- SELECT * FROM hr.job_history;
--- SELECT * FROM hr.departments
--- job_id

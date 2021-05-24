@@ -1,5 +1,3 @@
-USE hr;
-
 SELECT 
     JOB_TITLE AS 'Cargo',
     CASE

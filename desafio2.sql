@@ -4,6 +4,6 @@ CASE
   WHEN MAX_SALARY > 20000 THEN 'Alto'
   WHEN MAX_SALARY > 10000 THEN 'Médio'
   ELSE 'Baixo'
-END AS 'Nível'
+  END AS 'Nível'
 FROM hr.jobs
 ORDER BY JOB_TITLE;

@@ -7,6 +7,6 @@ FROM
     w3schools.order_details AS od
         INNER JOIN
     w3schools.products AS p ON od.ProductID = p.ProductID
-GROUP BY Produto
+GROUP BY p.ProductName
 HAVING AVG(od.Quantity) > 20
-ORDER BY Média;
+ORDER BY Média, Produto;

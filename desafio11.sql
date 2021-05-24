@@ -8,4 +8,5 @@ INNER JOIN
 FROM w3schools.customers AS c
 GROUP BY Country) AS quantityTable
 ON d.Country = quantityTable.País
+WHERE quantityTable.`Número de compatriotas` > 0
 ORDER BY Nome;

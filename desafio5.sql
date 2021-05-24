@@ -5,4 +5,3 @@ SELECT  jobs.JOB_TITLE AS `Cargo`,
 FROM hr.jobs
 ORDER BY  `Variação Salarial`,
           `Cargo`;
-          

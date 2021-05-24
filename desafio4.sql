@@ -2,7 +2,7 @@ SELECT j.JOB_TITLE AS 'Cargo',
 ROUND(AVG(e.SALARY)) AS "Média Salarial",
 (CASE
         WHEN AVG(e.SALARY) <= 5800 THEN 'Júnior'
- WHEN
+  WHEN
             AVG(e.SALARY) > 5801
                 AND AVG(e.SALARY) <= 7500
         THEN
@@ -20,4 +20,4 @@ FROM
     hr.employees AS e
     ON j.JOB_ID = e.JOB_ID
 GROUP BY Cargo
-ORDER BY AVG(e.SALARY) , Cargo
+ORDER BY AVG(e.SALARY) , Cargo;

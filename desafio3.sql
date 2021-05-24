@@ -4,3 +4,4 @@ SELECT
 FROM
     hr.jobs
 ORDER BY 2 , 1;
+-- https://riptutorial.com/sql/example/6529/order-by-alias

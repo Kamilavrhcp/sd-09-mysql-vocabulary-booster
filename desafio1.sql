@@ -3,7 +3,7 @@ SELECT
     CASE
         WHEN REGION_ID = 1 THEN 'Europe'
         ELSE 'não incluído'
-    END AS `Status inclusão`
+    END AS `Status Inclusão`
 FROM
     hr.countries
 ORDER BY País;

@@ -1,8 +1,9 @@
 SELECT
 CONCAT(E.FIRST_NAME, ' ', E.LAST_NAME) AS 'Nome completo',
 J.JOB_TITLE AS 'Cargo',
-E.HIRE_DATE AS 'Data de início do cargo',
+JS.START_DATE AS 'Data de início do cargo',
 D.DEPARTMENT_NAME AS 'Departamento'
-FROM hr.jobs J INNER JOIN hr.employees E ON E.JOB_ID = J.JOB_ID
-INNER JOIN hr.departments D ON D.DEPARTMENT_ID = E.DEPARTMENT_ID
+FROM hr.job_history JS INNER JOIN hr.employees E ON JS.EMPLOYEE_ID = E.EMPLOYEE_ID
+INNER JOIN hr.jobs J ON JS.JOB_ID = J.JOB_ID
+INNER JOIN hr.departments D ON JS.DEPARTMENT_ID = D.DEPARTMENT_ID
 ORDER BY CONCAT(E.FIRST_NAME, ' ', E.LAST_NAME) DESC, J.JOB_TITLE;

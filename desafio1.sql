@@ -5,6 +5,6 @@ SELECT COUNTRY_NAME AS País,
 			FROM hr.regions
 			WHERE REGION_ID = C.REGION_ID
 			)  = 'Europe', 'incluído', 'não incluído'
-		)
+		) AS 'Status Inclusão'
 FROM hr.countries AS C
 ORDER BY COUNTRY_NAME;

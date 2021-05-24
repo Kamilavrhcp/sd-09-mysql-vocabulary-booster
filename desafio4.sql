@@ -12,4 +12,3 @@ FROM
 ON j.JOB_ID = e.JOB_ID
 GROUP BY Cargo
 ORDER BY 2 ASC, 1 ASC;
-    

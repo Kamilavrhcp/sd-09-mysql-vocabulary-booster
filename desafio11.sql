@@ -5,7 +5,7 @@ FROM w3schools.customers AS d
 INNER JOIN
     (SELECT c.Country AS País,
         (COUNT(*) -1) AS `Número de compatriotas`
-	  FROM w3schools.customers AS c
-	  GROUP BY Country) AS quantityTable
+FROM w3schools.customers AS c
+GROUP BY Country) AS quantityTable
 ON d.Country = quantityTable.País
 ORDER BY Nome;

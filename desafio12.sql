@@ -12,4 +12,4 @@ e.JOB_ID = e2.JOB_ID
 AND
 e.FIRST_NAME <> e2.FIRST_NAME
 ORDER BY
-`Nome completo funcionário 1`, `Nome completo funcionário 2`
+`Nome completo funcionário 1`, `Nome completo funcionário 2`;

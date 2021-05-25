@@ -8,4 +8,3 @@ WHERE ord.ShipperID BETWEEN 1 AND 2
 ORDER BY 1,
   2,
   3 ASC;
-  

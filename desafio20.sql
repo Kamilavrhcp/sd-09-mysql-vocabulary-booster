@@ -10,7 +10,7 @@ hr.employees AS e, hr.departments d, hr.job_history AS jh, hr.jobs AS j
 WHERE
 jh.EMPLOYEE_ID = e.EMPLOYEE_ID
 AND
-e.DEPARTMENT_ID = d.DEPARTMENT_ID
+jh.DEPARTMENT_ID = d.DEPARTMENT_ID
 AND
 jh.JOB_ID = j.JOB_ID
 AND
@@ -18,3 +18,5 @@ e.EMAIL = email
 ORDER BY `Departamento` ASC, `Cargo` ASC;
 END$$
 DELIMITER ;
+
+CALL exibir_historico_completo_por_funcionario('NKOCHHAR');

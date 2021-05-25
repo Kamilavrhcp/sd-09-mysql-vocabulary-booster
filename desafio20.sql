@@ -11,11 +11,11 @@ j.JOB_TITLE AS 'Cargo'
 FROM
 employees AS e
 INNER JOIN
-	hr.job_history  AS jh ON jh.EMPLOYEE_ID = e.EMPLOYEE_ID
+hr.job_history  AS jh ON jh.EMPLOYEE_ID = e.EMPLOYEE_ID
 INNER JOIN
-	hr.jobs  AS j ON j.JOB_ID = jh.JOB_ID
+hr.jobs  AS j ON j.JOB_ID = jh.JOB_ID
 INNER JOIN
-	hr.departments AS d ON d.DEPARTMENT_ID = jh.DEPARTMENT_ID
+hr.departments AS d ON d.DEPARTMENT_ID = jh.DEPARTMENT_ID
 WHERE 
 e.EMAIL = email
 ORDER BY

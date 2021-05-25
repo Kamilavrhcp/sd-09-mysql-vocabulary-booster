@@ -1,5 +1,5 @@
 SELECT 
-    C.COUNTRY_NAME AS 'País',
+    C.COUNTRY_NAME AS `País`,
     IF(REGION_NAME = 'Europe',
         'incluído',
         'não incluído') AS 'Status Inclusão'

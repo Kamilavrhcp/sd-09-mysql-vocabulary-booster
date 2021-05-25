@@ -8,4 +8,5 @@ FROM
         INNER JOIN
     w3schools.products AS prod ON ordr.ProductID = prod.ProductID
 GROUP BY ProductName
+HAVING (SELECT AVG(Quantity)) > 20.00
 ORDER BY ROUND(AVG(Quantity), 2) , ProductName ASC;

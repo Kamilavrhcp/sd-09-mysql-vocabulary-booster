@@ -12,3 +12,4 @@ FROM
         INNER JOIN
     hr.departments AS dep ON his.DEPARTMENT_ID = dep.DEPARTMENT_ID
 ORDER BY 1 DESC , 2 ASC;
+

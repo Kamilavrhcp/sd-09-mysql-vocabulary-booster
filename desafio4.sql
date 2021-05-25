@@ -1,0 +1,16 @@
+SELECT 	
+(
+SELECT JOB_TITLE
+FROM hr.jobs
+WHERE JOB_ID = emp.JOB_ID
+) AS Cargo,
+ROUND(AVG(emp.SALARY),2) AS 'Média salarial',
+CASE 
+WHEN AVG(emp.SALARY) >= 2000 AND AVG(emp.SALARY) <= 5800 THEN 'Júnior'
+WHEN AVG(emp.SALARY) >= 5801 AND AVG(emp.SALARY) <= 7500 THEN 'Pleno'
+WHEN AVG(emp.SALARY) >= 7501 AND AVG(emp.SALARY) <= 10500 THEN 'Sênior'
+ELSE 'CEO'
+END AS Senioridade
+FROM hr.employees AS emp
+GROUP BY emp.JOB_ID
+ORDER BY ROUND(AVG(emp.SALARY),2), Cargo;

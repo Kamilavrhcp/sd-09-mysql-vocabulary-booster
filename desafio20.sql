@@ -15,7 +15,7 @@ FROM
 INNER JOIN hr.job_history AS j_h ON e.EMPLOYEE_ID = j_h.EMPLOYEE_ID
 INNER JOIN hr.departments AS d ON d.DEPARTMENT_ID = j_h.DEPARTMENT_ID
 INNER JOIN hr.jobs AS j ON j.JOB_ID = j_h.JOB_ID
-	WHERE e.EMAIL = emailInput
+    WHERE e.EMAIL = emailInput
 ORDER BY `Departamento`, Cargo;
 
 END $$

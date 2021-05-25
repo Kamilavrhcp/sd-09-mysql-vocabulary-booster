@@ -2,8 +2,8 @@ SELECT * FROM hr.employees;
 
 SELECT 
     CONCAT(FIRST_NAME, ' ', LAST_NAME) AS `Nome Completo`,
-    DATE(JH.START_DATE) AS `Data de início`,
-    E.SALARY AS Salário
+    DATE(START_DATE) AS `Data de início`,
+    SALARY AS Salário
 FROM
     hr.employees AS E
         INNER JOIN

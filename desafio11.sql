@@ -9,7 +9,8 @@ SELECT
                 AND main.CustomerID <> CustomerID) AS `Número de compatriotas`
 FROM w3schools.customers AS main
 WHERE
-    EXISTS( SELECT 
+    EXISTS
+    ( SELECT 
             *
         FROM customers
         WHERE

@@ -34,7 +34,7 @@ describe('Desafios iniciais', () => {
     await importer.disconnect();
   });
 
-  describe.only('8 - Exibe todas as **pessoas consumidoras** cujos pedidos já foram enviados pelas empresas `Speedy Express` ou `United Package`', () => {
+  describe('8 - Exibe todas as **pessoas consumidoras** cujos pedidos já foram enviados pelas empresas `Speedy Express` ou `United Package`', () => {
     it('Verifica o desafio 8', async () => {
       const challengeQuery = readFileSync('desafio8.sql', 'utf8').trim();
       const expectedResult = require('./challengesResults/challengeResult8');
@@ -43,7 +43,7 @@ describe('Desafios iniciais', () => {
     });
   });
 
-  describe('9 - Exibe todos as pessoas funcionárias que já realizaram algum pedido, mostrando também seu total de pedidos feitos', () => {
+  describe.only('9 - Exibe todos as pessoas funcionárias que já realizaram algum pedido, mostrando também seu total de pedidos feitos', () => {
     it('Verifica o desafio 9', async () => {
       const challengeQuery = readFileSync('desafio9.sql', 'utf8').trim();
       const expectedResult = require('./challengesResults/challengeResult9');

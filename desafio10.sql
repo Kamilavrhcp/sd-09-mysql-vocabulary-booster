@@ -1,7 +1,7 @@
 /* Exibe todos os produtos que já foram pedidos, que possuem uma média de quantidade
  nos pedidos registrados acima de 20.00 */
- 
- SELECT 
+
+SELECT
     prod.ProductName AS `Produto`,
     MIN(od.Quantity) AS Mínima,
     MAX(od.Quantity) AS Máxima,

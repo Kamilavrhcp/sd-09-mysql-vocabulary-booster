@@ -6,4 +6,6 @@ FROM
     hr.employees AS e
         INNER JOIN
     hr.job_history AS jh ON e.EMPLOYEE_ID = jh.EMPLOYEE_ID
-    ORDER BY `Nome completo`, `Data de início` ASC;
+WHERE
+    MONTH(jh.START_DATE) BETWEEN 1 AND 3
+ORDER BY `Nome completo` , `Data de início` ASC;

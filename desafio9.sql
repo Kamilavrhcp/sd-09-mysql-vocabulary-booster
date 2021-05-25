@@ -2,7 +2,7 @@
 
 SELECT 
     CONCAT(emp.FirstName, ' ', emp.LastName) AS `Nome completo`,
-    COUNT(*) AS `Total de pedidos`
+    COUNT(ord.OrderID) AS `Total de pedidos`
 FROM
     w3schools.employees AS emp
         INNER JOIN

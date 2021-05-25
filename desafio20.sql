@@ -18,5 +18,3 @@ e.EMAIL = email
 ORDER BY `Departamento` ASC, `Cargo` ASC;
 END$$
 DELIMITER ;
-
-CALL exibir_historico_completo_por_funcionario('NKOCHHAR');

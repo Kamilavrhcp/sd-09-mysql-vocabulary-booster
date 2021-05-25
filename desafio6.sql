@@ -1,9 +1,5 @@
-SELECT * FROM hr.jobs;
-SELECT * FROM hr.employees;
-SELECT * FROM hr.job_history;
-
 SELECT 
-    CONCAT(E.FIRST_NAME, ' ', E.LAST_NAME) AS `Nome completo`,
+    CONCAT(FIRST_NAME, ' ', LAST_NAME) AS `Nome completo`,
     J.JOB_TITLE AS `Cargo`,
     JH.START_DATE AS `Data de início do cargo`,
     D.DEPARTMENT_NAME AS Departamento

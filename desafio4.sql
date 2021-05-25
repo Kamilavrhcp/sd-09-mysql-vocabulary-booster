@@ -11,5 +11,5 @@ FROM
     hr.employees AS t1
         INNER JOIN
     hr.jobs AS t2 ON t1.JOB_ID = t2.JOB_ID
-GROUP BY t2.JOB_TITLE
-ORDER BY AVG(t1.SALARY), t2.JOB_TITLE;
+GROUP BY `Cargo`
+ORDER BY `Média salarial`, `Cargo`;

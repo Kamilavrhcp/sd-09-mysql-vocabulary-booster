@@ -9,5 +9,4 @@ WHERE
     CUTSTOMER.Country = CUTSTOMER2.Country
         AND CUTSTOMER.CustomerID <> CUTSTOMER2.CustomerID
 GROUP BY CUTSTOMER.ContactName , CUTSTOMER.Country
-ORDER BY CUTSTOMER.ContactName
-;
+ORDER BY CUTSTOMER.ContactName;

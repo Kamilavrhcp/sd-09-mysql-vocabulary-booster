@@ -7,4 +7,3 @@ FROM
     hr.jobs
 GROUP BY JOB_TITLE
 ORDER BY 2 , 1 ASC;
-

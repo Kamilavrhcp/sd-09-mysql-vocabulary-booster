@@ -16,4 +16,4 @@ SELECT ShipperID
 FROM w3schools.shippers
 WHERE ShipperName = 'Speedy Express' OR ShipperName = 'United Package'
 )
-ORDER BY `Nome de contato`, `Empresa que fez o envio`;
+ORDER BY `Nome de contato`, `Empresa que fez o envio`, OrderDate;

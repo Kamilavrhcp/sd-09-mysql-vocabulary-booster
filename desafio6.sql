@@ -1,10 +1,12 @@
 SELECT 
     CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME) AS 'Nome completo',
     j.JOB_TITLE AS 'Cargo',
-    j.START_DATE AS 'Data de início do cargo',
+    jh.START_DATE AS 'Data de início do cargo',
     d.DEPARTMENT_NAME AS 'Departamento'
 FROM
     hr.employees AS e
+		INNER JOIN
+	hr.job_history as jh ON e.EMPLOYEE_ID = jh.EMPLOYEE_ID
         INNER JOIN
     hr.jobs AS j ON j.JOB_ID = e.JOB_ID
         INNER JOIN

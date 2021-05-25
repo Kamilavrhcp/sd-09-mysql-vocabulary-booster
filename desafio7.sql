@@ -1,8 +1,8 @@
 SELECT
     UPPER(CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME)) AS 'Nome completo',
-	CASE
-		WHEN MONTH(jh.START_DATE) IN(1, 2, 3) THEN jh.START_DATE
-	END AS `Data de início`,
+  CASE
+    WHEN MONTH(jh.START_DATE) IN(1, 2, 3) THEN jh.START_DATE
+  END AS `Data de início`,
     e.SALARY AS `Salário`
 FROM
     hr.employees AS e

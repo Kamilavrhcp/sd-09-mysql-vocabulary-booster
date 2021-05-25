@@ -2,6 +2,6 @@ select p.ProductName AS `Produto`, MIN(od.Quantity) AS `Mínima`, MAX(od.Quantit
 FROM w3schools.order_details AS od
 INNER JOIN w3schools.products AS p
 ON od.ProductID = p.ProductID
--- WHERE `Média` > 20
 GROUP BY `Produto`
+HAVING `Média` > 20
 ORDER BY `Média`, `Produto`;

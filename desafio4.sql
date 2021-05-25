@@ -8,4 +8,3 @@ INNER JOIN hr.employees as e
 ON e.JOB_ID = j.JOB_ID
   GROUP BY e.JOB_ID
   ORDER BY `Média Salarial`, `Cargo` ASC;
-  

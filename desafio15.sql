@@ -6,7 +6,7 @@ SELECT
   ROUND(AVG(EMLPOY.SALARY), 2) AS 'Média salarial'
 FROM
   hr.employees AS EMLPOY
-	INNER JOIN
+  INNER JOIN
   hr.jobs AS JOB ON JOB.JOB_ID = EMLPOY.JOB_ID
 WHERE
   JOB.JOB_TITLE = cargo;

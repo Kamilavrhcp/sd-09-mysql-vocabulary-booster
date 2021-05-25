@@ -1,7 +1,7 @@
 delimiter $$
 create procedure exibir_historico_completo_por_funcionario(in empEmail varchar(300))
 begin
-select concat(em.FIRST_NAME,' ', em.LAST_NAME) as 'Nome Completo',
+select concat(em.FIRST_NAME,' ', em.LAST_NAME) as 'Nome completo',
 de.DEPARTMENT_NAME as 'Departamento',
 jo.JOB_TITLE as 'Cargo'
 from hr.job_history as jh

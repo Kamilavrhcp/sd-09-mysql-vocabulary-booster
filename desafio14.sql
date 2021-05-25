@@ -1,8 +1,5 @@
-SELECT DISTINCT
-s.Country AS `País`
-FROM
-w3schools.suppliers AS s, w3schools.customers as c
-WHERE 
-s.Country = c.Country
-ORDER BY s.Country
-LIMIT 5;
+(SELECT Country AS `País` FROM w3schools.suppliers)
+UNION
+(SELECT Country AS `País` FROM w3schools.customers)
+ORDER BY `País`
+LIMIT 5

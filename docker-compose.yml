@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  dbv5:
+    image: mysql:5.7
+    container_name: dbv5
+    volumes:
+      - datav5:/var/lib/mysql
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    restart: unless-stopped
+  myAdminv5:
+    image: phpmyadmin:latest
+    container_name: myAdminv5
+    environment:
+      PMA_HOST: dbv5
+      PMA_USER: root
+      PMA_PASSWORD: root
+    ports:
+      - 8080:80
+    depends_on:
+      - dbv5
+    restart: unless-stopped
+
+volumes:
+  datav5:

@@ -7,5 +7,5 @@ FROM
     hr.employees AS E
         INNER JOIN
     hr.jobs AS J ON E.JOB_ID = J.JOB_ID
-GROUP BY Cargo
+GROUP BY Cargo, MAX_SALARY, MIN_SALARY
 ORDER BY `Variação Salarial` ASC , Cargo ASC;

@@ -10,4 +10,4 @@ END AS 'Senioridade'
 FROM employees AS t1
 INNER JOIN jobs AS t2
 ON t1.JOB_ID = t2.JOB_ID
-GROUP BY Cargo ORDER BY 'Média Salarial', Cargo;
+GROUP BY Cargo ORDER BY AVG(SALARY), Cargo;

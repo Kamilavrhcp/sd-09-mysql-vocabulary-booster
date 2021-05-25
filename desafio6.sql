@@ -4,7 +4,7 @@ SELECT
     DATE(h.START_DATE) AS 'Data de início do cargo',
     d.DEPARTMENT_NAME AS 'Departamento'
 FROM
-	hr.job_history AS h
+hr.job_history AS h
         INNER JOIN
     hr.employees AS e ON h.EMPLOYEE_ID = e.EMPLOYEE_ID
         INNER JOIN

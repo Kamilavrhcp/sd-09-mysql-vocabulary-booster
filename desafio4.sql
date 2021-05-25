@@ -5,6 +5,6 @@ WHEN "Média salarial" < 7501 then "Pleno"
 WHEN "Média salarial" < 10501 then "Sênior"
 else "CEO"
 end as 'Senioridade'
- FROM hr.employees 
- GROUP BY JOB_ID
- order by `Média salarial` asc, Cargo;
+FROM hr.employees 
+GROUP BY JOB_ID
+order by `Média salarial` asc, Cargo;

@@ -10,6 +10,6 @@ hr.employees e, hr.employees e2
 WHERE
 e.JOB_ID = e2.JOB_ID
 AND
-e.FIRST_NAME <> e2.FIRST_NAME
+e.EMPLOYEE_ID <> e2.EMPLOYEE_ID
 ORDER BY
-`Nome completo funcionário 1`, `Nome completo funcionário 2`;
+`Nome completo funcionário 1` ASC, `Nome completo funcionário 2` ASC;

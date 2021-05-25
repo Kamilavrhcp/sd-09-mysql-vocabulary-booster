@@ -6,8 +6,8 @@ de.DEPARTMENT_NAME as 'Departamento',
 jo.JOB_TITLE as 'Cargo'
 from hr.job_history as jh
 inner join hr.employees as em on em.EMPLOYEE_ID = jh.EMPLOYEE_ID
-inner join hr.jobs as jo on em.JOB_ID = jo.JOB_ID
-inner join hr.departments as de on de.DEPARTMENT_ID = em.DEPARTMENT_ID
+inner join hr.jobs as jo on jh.JOB_ID = jo.JOB_ID
+inner join hr.departments as de on de.DEPARTMENT_ID = jh.DEPARTMENT_ID
 where em.EMAIL = empEmail
 order by `Departamento`, `Cargo`;
 end $$

@@ -1,6 +1,6 @@
 /* Exibe todas as pessoas clientes que possuem compatriotas, mostrando a quantidade de
  compatriotas para cada pessoa cliente */
- 
+
 SELECT
     tab1.ContactName AS `Nome`,
     tab1.Country AS `País`,

@@ -1,0 +1,15 @@
+DELIMITER $$
+
+CREATE PROCEDURE buscar_media_por_cargo(IN cargo VARCHAR(100))
+BEGIN
+SELECT
+	ROUND(AVG(EMLPOY.SALARY), 2) AS 'Média salarial'
+FROM
+	hr.employees AS EMLPOY
+		INNER JOIN
+	hr.jobs AS JOB ON JOB.JOB_ID = EMLPOY.JOB_ID
+WHERE
+	JOB.JOB_TITLE = cargo;
+END $$
+
+DELIMITER ;

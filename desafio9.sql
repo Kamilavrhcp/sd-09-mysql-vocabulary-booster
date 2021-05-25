@@ -1,6 +1,9 @@
-SELECT c.CustomerName AS `Nome completo`, COUNT(o.orderID) as 'Total de pedidos' FROM w3schools.customers as c
-INNER JOIN w3schools.orders as o ON o.CustomerID = c.CustomerID
-GROUP BY c.CustomerName;
-
--- WHERE c.CustomerName = CONCAT(w3schools.employees.firstName, ' ',w3schools.employees.lastName)
--- SELECT CONCAT(w3schools.employees.firstName, ' ',w3schools.employees.lastName) FROM w3schools.employees;
+SELECT 
+    CONCAT(e.firstName, ' ', e.lastName) AS `Nome completo`,
+    COUNT(o.orderID) AS 'Total de pedidos'
+FROM
+    w3schools.employees AS e
+        INNER JOIN
+    w3schools.orders AS o ON o.EmployeeID = e.EmployeeID
+GROUP BY `Nome completo`
+ORDER BY `Total de pedidos` ASC;

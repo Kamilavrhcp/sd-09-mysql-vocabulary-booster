@@ -1,5 +1,12 @@
-SELECT p.ProductName as `Produto`, MIN(od.Quantity) as `Mínima`, MAX(od.Quantity) as `Máxima`, ROUND(AVG(od.Quantity),2) as `Média` FROM w3schools.products as p
-INNER JOIN w3schools.order_details as od ON od.ProductID = p.ProductID
--- WHERE AVG(od.Quantity) > 20
+SELECT 
+    p.ProductName AS `Produto`,
+    MIN(od.Quantity) AS Mínima,
+    MAX(od.Quantity) AS Máxima,
+    ROUND(AVG(od.Quantity), 2) AS Média
+FROM
+    w3schools.products AS p
+        INNER JOIN
+    w3schools.order_details AS od ON od.ProductID = p.ProductID
 GROUP BY p.ProductID
-ORDER BY `Média` ASC, `Produto`ASC;
+HAVING ROUND(AVG(od.Quantity), 2) > 20.00
+ORDER BY Média ASC , Produto ASC

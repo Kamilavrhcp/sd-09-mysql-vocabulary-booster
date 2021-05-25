@@ -5,4 +5,3 @@ SELECT job_title as 'Cargo',
 FROM hr.jobs
 ORDER BY 2,
   job_title ASC;
-  

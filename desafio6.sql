@@ -8,4 +8,3 @@ FROM hr.job_history AS hist
   INNER JOIN hr.departments AS dep ON hist.department_id = dep.department_id
 ORDER BY 1 DESC,
   2 ASC;
-  

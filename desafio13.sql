@@ -1,5 +1,5 @@
 SELECT 
-    p.ProductName AS 'Produto', p.Price AS 'Preço', od.Quantity
+    p.ProductName AS 'Produto', p.Price AS 'Preço'
 FROM
     w3schools.order_details AS od
         INNER JOIN

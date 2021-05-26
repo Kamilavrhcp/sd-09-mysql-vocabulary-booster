@@ -9,5 +9,6 @@ SELECT
   t2.PHONE_NUMBER AS `Telefone funcionário 2`
 FROM hr.employees AS t1, employees AS t2
 WHERE t1.JOB_ID = t2.JOB_ID
-HAVING `Nome completo funcionário 1` <> `Nome completo funcionário 2`
+HAVING `Nome completo funcionário 1` <>
+  `Nome completo funcionário 2`
 ORDER BY 1, 4;

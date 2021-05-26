@@ -11,5 +11,5 @@ SELECT
 FROM
     w3schools.customers a
 GROUP BY Nome, Country, `Número de compatriotas`
-	HAVING `Número de compatriotas` > 0
+HAVING `Número de compatriotas` > 0
 ORDER BY 1;

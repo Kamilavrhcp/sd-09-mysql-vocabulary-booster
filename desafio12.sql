@@ -10,4 +10,4 @@ FROM
     hr.employees AS T2
 WHERE
     T1.JOB_ID = T2.JOB_ID AND T1.EMPLOYEE_ID <> T2.EMPLOYEE_ID
-ORDER BY `Nome completo funcionário 1`;
+ORDER BY `Nome completo funcionário 1` ASC, `Nome completo funcionário 2` ASC;

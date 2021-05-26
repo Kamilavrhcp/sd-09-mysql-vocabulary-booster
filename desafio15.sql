@@ -1,4 +1,0 @@
-DELIMITER $$
-CREATE PROCEDURE buscar_media_por_cargo(IN hr.JOB_TITLE VARCHAR(100))
-	BEGIN
-    END

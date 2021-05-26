@@ -12,4 +12,4 @@ FROM
         JOIN
     hr.employees AS e ON j.JOB_ID = e.JOB_ID
 GROUP BY j.JOB_TITLE
-ORDER BY `Média salarial` , j.JOB_TITLE
+ORDER BY `Média salarial` , j.JOB_TITLE;

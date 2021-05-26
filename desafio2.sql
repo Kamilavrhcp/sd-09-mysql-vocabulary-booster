@@ -13,10 +13,10 @@ SELECT
             'Médio'
         WHEN
             MAX_SALARY >= 20001
-                AND MAX_SALARY <= 20000
+                AND MAX_SALARY <= 30000
         THEN
             'Alto'
-        WHEN MAX_SALARY >= 30000 THEN 'Altíssimo'
+        WHEN MAX_SALARY > 30000 THEN 'Altíssimo'
         ELSE 'Salário não encontrado'
     END AS 'Nível'
 FROM

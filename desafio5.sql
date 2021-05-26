@@ -5,5 +5,5 @@ SELECT
     ROUND(AVG(max_salary / 12), 2) AS 'Média Máxima Mensal'
 FROM
     hr.jobs
-GROUP BY job_title
+GROUP BY 1, 2
 ORDER BY 2 , 1;

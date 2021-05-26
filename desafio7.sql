@@ -7,6 +7,6 @@ FROM
     hr.job_history AS jh
         INNER JOIN
     hr.employees AS e ON jh.employee_id = e.employee_id
-GROUP BY 2, 1
+GROUP BY 2, 1, 3
 HAVING MONTH(jh.start_date) IN (01, 02, 03)
 ORDER BY 1 , 2;

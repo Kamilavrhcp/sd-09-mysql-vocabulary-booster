@@ -2,12 +2,12 @@ SELECT
     main_table.ContactName AS `Nome`,
     main_table.Country AS `País`,
     (SELECT 
-            COUNT(Country) - 1
+            COUNT(Country)
         FROM
             w3schools.customers AS support_table
         WHERE
-            support_table.country = main_table.country)AS 'Número de compatriotas'
+            support_table.country = main_table.country AND support_table.customerID != main_table.customerID)AS 'Número de compatriotas'
 FROM
     w3schools.customers AS main_table
-GROUP BY CustomerName , Country
+GROUP BY CustomerName , Country, `Número de compatriotas`
 ORDER BY Nome;

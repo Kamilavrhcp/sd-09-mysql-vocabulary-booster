@@ -6,4 +6,5 @@ SELECT
 FROM w3schools.order_details AS d
 INNER JOIN w3schools.products AS p ON p.ProductID = d.ProductID
 GROUP BY p.ProductID
+HAVING `Média` > 20.00
 ORDER BY `Média`, `Produto`;

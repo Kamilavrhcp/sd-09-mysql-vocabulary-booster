@@ -1,10 +1,10 @@
-SELECT
-	IF ()
-	CONCAT(FIRST_NAME, ' ', LAST_NAME) AS 'Nome completo funcionário 1',
-    AS 'Salário funcionário 1',
-    AS 'Telefone funcionário 1',
-    CONCAT(FIRST_NAME, ' ', LAST_NAME) AS 'Nome completo funcionário 2',
-    AS 'Salário funcionário 2',
-    AS 'Telefone funcionário 2'
-    FROM hr.employees
-    ;
+-- SELECT
+--     CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME) AS 'Nome completo funcionário 1',
+--     e.SALARY AS 'Salário funcionário 1',
+--     e.PHONE_NUMBER AS 'Telefone funcionário 1',
+--     CONCAT(secnd.FIRST_NAME, ' ', secnd.LAST_NAME) AS 'Nome completo funcionário 2',
+--     secnd.SALARY AS 'Salário funcionário 2',
+--     secnd.PHONE_NUMBER AS 'Telefone funcionário 2'
+--     FROM hr.employees AS e
+--     WHERE 
+--     ORDER BY `Nome completo funcionário 1`,`Nome completo funcionário 2`;

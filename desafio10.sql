@@ -9,4 +9,4 @@ FROM
     w3schools.products AS P ON P.ProductID = OD.ProductID
 GROUP BY OD.ProductID
 HAVING Média > 20.00
-ORDER BY Média ASC;
+ORDER BY Média ASC, Produto ASC;

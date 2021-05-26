@@ -7,4 +7,4 @@ WHERE t3.DEPARTMENT_ID = t1.DEPARTMENT_ID) AS 'Departamento'
 FROM hr.employees AS t1
 INNER JOIN hr.jobs AS t2
 ON t1.JOB_ID = t2.JOB_ID
-ORDER BY Cargo;
+ORDER BY CONCAT(t1.FIRST_NAME, ' ', t1.LAST_NAME ) DESC, Cargo;

@@ -7,4 +7,4 @@ JOIN hr.jobs as job
 ON employe.JOB_ID = job.JOB_ID
 join hr.departments AS depart
 ON employe.DEPARTMENT_ID = depart.DEPARTMENT_ID
-order by "Nome completo" desc, Cargo asc;
+order by `Nome completo` desc, Cargo asc;

@@ -11,5 +11,4 @@ FROM
     hr.employees AS employees2 ON employees2.JOB_ID = employees.JOB_ID
         AND employees2.EMPLOYEE_ID <> employees.EMPLOYEE_ID
 ORDER BY 1 , 4;
-
-    
+  

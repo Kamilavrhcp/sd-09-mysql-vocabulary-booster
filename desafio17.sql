@@ -2,10 +2,10 @@ USE w3schools;
 DELIMITER $$
 
 CREATE TRIGGER insert_order
-	BEFORE INSERT ON `orders`
-	FOR EACH ROW
+BEFORE INSERT ON `orders`
+FOR EACH ROW
 BEGIN
-	SET NEW.OrderDate = NOW();
+SET NEW.OrderDate = NOW();
 END $$
 
 DELIMITER ;

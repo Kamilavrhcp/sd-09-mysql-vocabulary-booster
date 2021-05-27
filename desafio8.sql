@@ -10,4 +10,3 @@ FROM
     w3schools.shippers AS s ON s.ShipperID = o.ShipperID
         AND s.ShipperID IN (1 , 2)
 ORDER BY c.ContactName ASC , s.ShipperName ASC;
-    

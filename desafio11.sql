@@ -1,6 +1,6 @@
 SELECT 
-    c1.contactname,
-    c1.country,
+    c1.contactname as Nome,
+    c1.country as País,
     (SELECT
             COUNT(*) - 1
         FROM

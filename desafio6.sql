@@ -1,7 +1,7 @@
 SELECT concat(employe.FIRST_NAME, " ", employe.LAST_NAME) AS NOME,
 job.JOB_TITLE as Cargo,
 employe.HIRE_DATE as "Data de início do cargo",
-DEPART.DEPARTMENT_NAME asDepartamento
+DEPART.DEPARTMENT_NAME as Departamento
 from hr.employees as employe
 JOIN hr.jobs as job
 ON employe.JOB_ID = job.JOB_ID

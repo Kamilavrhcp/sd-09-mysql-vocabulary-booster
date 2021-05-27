@@ -12,7 +12,7 @@ BEGIN
     WHERE
         MONTH(HIRE_DATE) = mes
             AND YEAR(HIRE_DATE) = ano
-	INTO returnFunction;
+    INTO returnFunction;
     RETURN returnFunction;
 END $$
 

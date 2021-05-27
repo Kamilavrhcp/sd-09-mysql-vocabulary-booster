@@ -1,4 +1,4 @@
-SELECT 
+SELECT
     CONCAT(employees.FIRST_NAME,' ', employees.LAST_NAME) AS 'Nome completo funcionário 1',
     employees.SALARY AS 'Salário funcionário 1',
     employees.PHONE_NUMBER AS 'Telefone funcionário 1',
@@ -11,4 +11,3 @@ FROM
     hr.employees AS employees2 ON employees2.JOB_ID = employees.JOB_ID
         AND employees2.EMPLOYEE_ID <> employees.EMPLOYEE_ID
 ORDER BY 1 , 4;
-  

@@ -5,4 +5,4 @@ SELECT
         'não incluído') AS 'Status Inclusão'
 FROM
     hr.countries
-ORDER BY 'País';
+ORDER BY COUNTRY_NAME;

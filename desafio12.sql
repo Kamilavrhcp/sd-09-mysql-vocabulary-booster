@@ -6,7 +6,7 @@ SELECT
     employees2.SALARY AS 'Salário funcionário 2',
     employees2.PHONE_NUMBER AS 'Telefone funcionário 2'
 FROM
-    hr.employeesS
+    hr.employees
         INNER JOIN
     hr.employees AS employees2 ON employees2.JOB_ID = employees.JOB_ID
         AND employees2.EMPLOYEE_ID <> employees.EMPLOYEE_ID

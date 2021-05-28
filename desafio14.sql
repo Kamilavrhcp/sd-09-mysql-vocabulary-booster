@@ -1,9 +1,10 @@
 SELECT 
-    C.Country AS `País`
+    Country AS `País`
 FROM
-    w3schools.customers AS C
-        INNER JOIN
-    w3schools.suppliers AS S ON S.Country != C.Country
-GROUP BY `País`
+    w3schools.customers 
+UNION SELECT 
+    Country
+FROM
+    w3schools.suppliers
 ORDER BY `País` ASC
 LIMIT 5;

@@ -8,5 +8,7 @@ FROM
 
 WHERE
 	c1.CustomerID <> c2.CustomerID AND c1.Country = c2.Country
+    
+GROUP BY c1.ContactName, c1.Country
 
 ORDER BY c1.ContactName;

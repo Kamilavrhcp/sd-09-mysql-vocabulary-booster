@@ -13,4 +13,3 @@ FROM
 ORDER BY País
 
 LIMIT 5;
-    

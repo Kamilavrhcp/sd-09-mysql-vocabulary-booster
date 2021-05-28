@@ -14,4 +14,3 @@ w3schools.shippers AS s ON o.ShipperID = s.ShipperID
 WHERE s.ShipperID <> 3
 
 ORDER BY ContactName, ShipperName;
-    

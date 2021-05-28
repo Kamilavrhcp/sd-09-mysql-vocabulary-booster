@@ -14,4 +14,3 @@ GROUP BY p.ProductName
 HAVING ROUND(AVG(Quantity), 2) > 20
 
 ORDER BY ROUND(AVG(Quantity), 2) , ProductName
-    

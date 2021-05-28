@@ -12,4 +12,3 @@ WHERE o_d.Quantity > 80
 GROUP BY ProductName, Price
 
 ORDER BY ProductName;
-    

@@ -1,16 +1,16 @@
-SELECT DISTINCT
-	c.Country AS 'País'
+(SELECT DISTINCT
+    c.Country AS País
 FROM
-    w3schools.customers AS c
+    w3schools.customers AS c)
 
-UNION
+UNION ALL
 
-SELECT DISTINCT
-	s.Country
+(SELECT DISTINCT
+    s.Country
 FROM
-	w3schools.suppliers AS s
+    w3schools.suppliers AS s)
 
-ORDER BY 'País'
+ORDER BY País
 
 LIMIT 5;
     

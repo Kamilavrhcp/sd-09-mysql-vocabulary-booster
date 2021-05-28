@@ -5,10 +5,11 @@ SELECT
 FROM
     w3schools.customers AS c1,
     w3schools.customers AS c2
-
-WHERE
-	c1.CustomerID <> c2.CustomerID AND c1.Country = c2.Country
     
-GROUP BY c1.ContactName, c1.Country
+WHERE
+    c1.CustomerID <> c2.CustomerID
+        AND c1.Country = c2.Country
+        
+GROUP BY c1.ContactName , c1.Country
 
-ORDER BY c1.ContactName;
+ORDER BY c1.ContactName

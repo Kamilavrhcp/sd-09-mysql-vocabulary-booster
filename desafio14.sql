@@ -6,5 +6,5 @@ UNION SELECT
     Country
 FROM
     w3schools.suppliers
-ORDER BY `País` ASC
+ORDER BY `País`
 LIMIT 5;

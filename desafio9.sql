@@ -8,8 +8,5 @@ INNER JOIN
 w3schools.orders AS o ON o.EmployeeID = e.EmployeeID
 
 GROUP BY CONCAT(FirstName, ' ', LastName)
-ORDER BY COUNT(*);
-    
-SELECT * FROM w3schools.orders;
-SELECT * FROM w3schools.employees;
-    
+
+ORDER BY COUNT(*);    

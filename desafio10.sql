@@ -8,4 +8,5 @@ FROM
         INNER JOIN
     w3schools.order_details AS d ON p.ProductID = d.ProductID
 GROUP BY Produto
+HAVING Média > 20.00
 ORDER BY Média , Produto ASC;

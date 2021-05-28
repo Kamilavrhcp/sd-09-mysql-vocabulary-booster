@@ -8,5 +8,5 @@ FROM
         INNER JOIN
     w3schools.order_details AS od ON (od.ProductId = p.ProductId)
 GROUP BY ProductName
-ORDER BY AVG(od.Quantity)
-LIMIT 100 OFFSET 29;
+ORDER BY AVG(od.Quantity), ProductName
+LIMIT 1000 OFFSET 29;

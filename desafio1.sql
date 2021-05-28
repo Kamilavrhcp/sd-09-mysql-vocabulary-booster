@@ -1,4 +1,4 @@
-SELECT 
+SELECT
     C.COUNTRY_NAME AS 'País',
     CASE
         WHEN R.REGION_NAME = 'Europe' THEN 'incluído'

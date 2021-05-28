@@ -17,4 +17,3 @@ FROM
     ORDER BY Média ASC , Produto ASC) AS T
 WHERE
     Média > 20;
-    

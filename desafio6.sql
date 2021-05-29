@@ -9,8 +9,8 @@ FROM
     hr.job_history AS hist
         INNER JOIN
     hr.jobs AS jobs ON hist.JOB_ID = jobs.JOB_ID
-		INNER JOIN
-	hr.departments AS depart ON hist.DEPARTMENT_ID = depart.DEPARTMENT_ID
-		INNER JOIN
-	hr.employees AS employees ON hist.EMPLOYEE_ID = employees.EMPLOYEE_ID
+        INNER JOIN
+    hr.departments AS depart ON hist.DEPARTMENT_ID = depart.DEPARTMENT_ID
+        INNER JOIN
+    hr.employees AS employees ON hist.EMPLOYEE_ID = employees.EMPLOYEE_ID
 ORDER BY 1 DESC , 2;

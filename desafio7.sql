@@ -9,5 +9,5 @@ FROM
         INNER JOIN
     hr.employees AS e ON h.EMPLOYEE_ID = e.EMPLOYEE_ID
 WHERE
-    MONTH(h.START_DATE) IN (01 , 02, 03)
-ORDER BY `Nome completo` ASC , h.START_DATE DESC;
+    MONTH(h.START_DATE) IN (1 , 2, 3)
+ORDER BY `Nome completo` ASC , 'Data de início' DESC;

@@ -6,7 +6,7 @@ CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario(email VARCHAR(25))
 RETURNS DOUBLE READS SQL DATA
 BEGIN
 DECLARE jobs_history DOUBLE;
-	SELECT 
+SELECT 
     COUNT(employee_id)
 FROM
     hr.job_history

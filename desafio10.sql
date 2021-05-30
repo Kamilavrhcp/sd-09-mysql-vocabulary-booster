@@ -9,4 +9,3 @@ FROM w3schools.order_details AS o
     GROUP BY `Produto`
     HAVING `Média` > 20
     ORDER BY `Média`, `Produto`;
-    

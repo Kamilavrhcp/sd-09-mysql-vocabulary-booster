@@ -6,4 +6,4 @@ FROM
     JOIN w3schools.order_details AS d ON p.ProductID = d.ProductID
     AND d.Quantity > 80
 ORDER BY
-    'Preço';
+    `Produto`;

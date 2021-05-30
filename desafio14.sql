@@ -1,11 +1,11 @@
 SELECT
-    Country
+    Country As 'País'
 FROM
     w3schools.customers
 UNION
 SELECT
-    Country
+    Country 'País'
 FROM
     w3schools.suppliers
 ORDER BY
-    Country;
+    `País` ASC LIMIT 5;

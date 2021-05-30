@@ -10,4 +10,4 @@ INNER JOIN
     w3schools.shippers AS S ON S.ShipperID = O.ShipperID
 WHERE
     O.ShipperID BETWEEN 1 AND 2
-ORDER BY C.ContactName, S.ShipperName;
+ORDER BY C.ContactName ASC, S.ShipperName ASC, O.OrderDate ASC;

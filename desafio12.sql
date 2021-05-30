@@ -8,4 +8,3 @@ T2.PHONE_NUMBER AS `Telefone funcionário 2`
 FROM hr.employees AS T1, hr.employees AS T2
 WHERE T1.JOB_ID = T2.JOB_ID AND (T1.FIRST_NAME <> T2.FIRST_NAME OR T1.LAST_NAME <> T2.LAST_NAME)
 ORDER BY `Nome completo funcionário 1`ASC, `Nome completo funcionário 2` ASC;
-    

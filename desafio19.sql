@@ -10,4 +10,4 @@ WHERE HIRE_DATE LIKE CONCAT(input_year, '-', IF (input_month < 10, CONCAT(0, inp
 RETURN quantity;
 END $$
 
-DELIMITER :
+DELIMITER ;

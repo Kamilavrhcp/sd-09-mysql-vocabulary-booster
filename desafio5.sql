@@ -6,6 +6,6 @@ SELECT
 FROM
     hr.employees AS E
 INNER JOIN
-    hr.jobs AS J ON J.JOB_ID = E.JOB_ID
+    hr.jobs AS J ON E.JOB_ID = J.JOB_ID
 GROUP BY E.JOB_ID
-ORDER BY `Variação Salarial` , J.JOB_TITLE;
+ORDER BY `Variação Salarial` ASC, J.JOB_TITLE ASC;

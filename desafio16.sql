@@ -16,7 +16,7 @@ WHERE
             hr.employees
         WHERE
             EMAIL = input_email) GROUP BY EMPLOYEE_ID INTO quantity;
-		RETURN quantity;
+RETURN quantity;
 END $$
     
 DELIMITER ;

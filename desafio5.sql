@@ -5,5 +5,6 @@ SELECT
     ROUND(MIN_SALARY / 12, 2) AS `Média mínima mensal`
 FROM
     hr.jobs
-ORDER BY `Variação Salarial`, `Cargo`
-;
+ORDER BY
+    `Variação Salarial`,
+    `Cargo`;

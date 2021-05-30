@@ -7,6 +7,7 @@ WHERE
             ProductID
         FROM
             w3schools.order_details AS od
-        WHERE (od.ProductID = p.ProductID) AND (quantity > 80))
+        WHERE
+            (od.ProductID = p.ProductID)
+                AND (quantity > 80))
 ORDER BY Produto ASC;
-

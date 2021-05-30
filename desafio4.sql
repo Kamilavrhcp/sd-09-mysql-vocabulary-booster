@@ -1,6 +1,6 @@
 SELECT DISTINCT
     j.JOB_TITLE AS 'Cargo',
-    ROUND(AVG(e.SALARY), 2) AS 'Média Salarial',
+    ROUND(AVG(e.SALARY), 2) AS 'Média salarial',
     CASE
         WHEN
             ROUND(AVG(e.SALARY), 2) >= 2000

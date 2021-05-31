@@ -8,5 +8,5 @@ FROM
 WHERE
     c1.Country = c2.Country
         AND c1.CustomerID != c2.CustomerID
-GROUP BY `Nome`
+GROUP BY `Nome`, `País` 
 ORDER BY `Nome`;

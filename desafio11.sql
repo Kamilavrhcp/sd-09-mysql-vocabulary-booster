@@ -1,6 +1,6 @@
 SELECT 
     a.ContactName AS 'Nome',
-    a.Country AS 'Pais',
+    a.Country AS 'País',
     (SELECT 
             COUNT(b.Country)
         FROM

@@ -4,7 +4,7 @@ DELIMITER $$
 CREATE PROCEDURE buscar_media_por_cargo(IN cargo VARCHAR(100))
 BEGIN
   SELECT
-    t.Média
+    t.Média as 'Média salarial'
   FROM
     (SELECT DISTINCT
       j.JOB_TITLE AS 'Cargo',

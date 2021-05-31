@@ -9,6 +9,6 @@ WHEN AVG(e.SALARY) > 10500 THEN 'CEO'
 END AS 'Senioridade'
 FROM hr.jobs AS hr
 INNER JOIN employees AS e
-WHERE hr.JOB_ID = e.JOB_ID
+ON hr.JOB_ID = e.JOB_ID
 GROUP BY Cargo
 ORDER BY 2, 1;

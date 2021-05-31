@@ -5,7 +5,7 @@ DELIMITER $$
 CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario(email varchar(25))
 RETURNS INT READS SQL DATA
 BEGIN
-	DECLARE job_total INT;
+DECLARE job_total INT;
 SELECT 
     COUNT(j.EMPLOYEE_ID)
 FROM

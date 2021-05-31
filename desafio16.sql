@@ -6,12 +6,9 @@ RETURNS INT READS SQL DATA
 BEGIN
 DECLARE result INT;
 SELECT COUNT(*) FROM hr.job_history AS t1
-INNER JOIN hr.employees AS t2
-ON t1.employee_id = t2.employee_id
+INNER JOIN hr.employees AS t2 ON t1.employee_id = t2.employee_id
 WHERE t2.email = usermail INTO result;
 RETURN result;
 END $$
 
 DELIMITER ;
-
-SELECT BUSCAR_QUANTIDADE_DE_EMPREGOS_POR_FUNCIONARIO('NKOCHHAR') INTO result;

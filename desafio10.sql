@@ -11,5 +11,5 @@ FROM
     INNER JOIN w3schools.products AS p ON d.ProductID = p.ProductID
     GROUP BY d.ProductID) AS t
 WHERE
-    t.Média >= 20.00
+    t.Média > 20.00
 ORDER BY t.Média ASC , t.Produto ASC;

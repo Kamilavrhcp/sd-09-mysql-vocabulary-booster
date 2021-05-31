@@ -8,4 +8,4 @@ FROM
         INNER JOIN
     products AS p ON p.ProductID = od.ProductID
 GROUP BY od.ProductID HAVING `Média` > 20
-ORDER BY `Média`;
+ORDER BY `Média`,`Produto`;

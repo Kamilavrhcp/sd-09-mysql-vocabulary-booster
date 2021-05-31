@@ -2,7 +2,7 @@ SELECT
     a.ContactName AS 'Nome',
     a.Country AS 'Pais',
     (SELECT 
-            COUNT(Country)
+            COUNT(b.Country)
         FROM
             customers AS b
         WHERE

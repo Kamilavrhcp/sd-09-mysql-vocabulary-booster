@@ -5,6 +5,4 @@ SELECT
         'não incluído') AS 'Status Inclusão'
 FROM
     countries AS c
-WHERE
-    c.REGION_ID = 1
 ORDER BY COUNTRY_NAME;

@@ -1,1 +1,1 @@
-MYSQL_USER=firstUser MYSQL_PASSWORD=12345 HOSTNAME=localhost npm test tests/hrChallenges.spec.js
+MYSQL_USER=firstUser MYSQL_PASSWORD=12345 HOSTNAME=localhost npm test tests/w3schoolsChallenges.spec.js

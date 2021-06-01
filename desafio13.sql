@@ -1,13 +1,7 @@
--- ## 13 - Exibe todos produtos **que já tiveram um pedido associado requerindo uma quantidade desse produto maior que 80**
-
--- Exiba todos os produtos **que já tiveram um pedido associado requerindo uma quantidade desse produto maior que 80**. 
-
--- > Use o banco `w3schools` como referência
-
--- Monte uma query que exiba 02 colunas:
-
--- 1. A primeira deve possuir o alias "**Produto**" e exibir o nome do produto.
-
--- 2. A segunda deve possuir o alias "**Preço**" e exibir o preço desse produto.
-
--- Os resultados devem estar ordenados pelo nome do produto em ordem alfabética.
+SELECT t1.ProductName AS Produto,
+t1.Price AS Preço
+FROM w3schools.products AS t1
+WHERE EXISTS (
+SELECT * FROM w3schools.order_details AS t2
+WHERE Quantity > 80 AND t1.ProductID = t2.ProductID)
+ORDER BY PRODUTO;

@@ -1,4 +1,3 @@
-
 SELECT 
     UPPER(CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME)) AS 'Nome completo',
     h.START_DATE AS 'Data de início',

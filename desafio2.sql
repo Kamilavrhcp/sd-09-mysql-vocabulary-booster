@@ -1,5 +1,4 @@
-SELECT 
-    JOB_TITLE AS 'Cargo',
+SELECT JOB_TITLE AS 'Cargo',
     CASE
         WHEN
             MAX_SALARY >= '5000'
@@ -21,9 +20,3 @@ SELECT
 FROM
     hr.jobs
 ORDER BY JOB_TITLE ASC;
-
-    
-  
-
-   
-

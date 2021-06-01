@@ -1,6 +1,4 @@
- SELECT 
-    j.JOB_TITLE as 'Cargo',
-    ROUND(AVG(e.SALARY), 2) AS 'Média salarial',
+SELECT j.JOB_TITLE as 'Cargo', ROUND(AVG(e.SALARY), 2) AS 'Média salarial',
     CASE
         WHEN AVG(e.SALARY) > 10500 THEN 'CEO'
         WHEN AVG(e.SALARY) > 7500 THEN 'Sênior'

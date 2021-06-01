@@ -5,7 +5,7 @@ CREATE TRIGGER onOrdersInsert
 BEFORE INSERT ON w3schools.orders
 FOR EACH ROW
 BEGIN
-	SET NEW.OrderDate = DATE(NOW());
+SET NEW.OrderDate = DATE(NOW());
 END $$
 
 DELIMITER ;

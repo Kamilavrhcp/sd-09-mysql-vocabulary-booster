@@ -8,13 +8,13 @@ SELECT
     d.DEPARTMENT_NAME AS 'Departamento',
     j.JOB_TITLE AS 'Cargo'
 FROM
-    employees AS e
-        INNER JOIN
-    job_history AS jh ON jh.EMPLOYEE_ID = e.EMPLOYEE_ID
-        INNER JOIN
-	departments AS d ON d.DEPARTMENT_ID = jh.DEPARTMENT_ID
-        INNER JOIN
-    jobs AS j ON j.JOB_ID = jh.JOB_ID
+employees AS e
+INNER JOIN
+job_history AS jh ON jh.EMPLOYEE_ID = e.EMPLOYEE_ID
+INNER JOIN
+departments AS d ON d.DEPARTMENT_ID = jh.DEPARTMENT_ID
+INNER JOIN
+jobs AS j ON j.JOB_ID = jh.JOB_ID
 WHERE e.EMAIL = email
 ORDER BY `Departamento` , `Cargo` ASC;
 END $$

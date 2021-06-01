@@ -1,10 +1,9 @@
-
-
+USE w3schools;
 DELIMITER $$
 CREATE TRIGGER insereDataAoCriarPedido
-AFTER INSERT ON w3schools.order
+BEFORE INSERT ON w3schools.orders
 FOR EACH ROW
 BEGIN
-INSERT DATE(NOW()) ON w3schools.orders.orderDaTe
+INSERT INTO w3schools.orders(OrderDate) VALUES(DATE(NOW()));
 END $$
 DELIMITER ;

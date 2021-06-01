@@ -10,16 +10,3 @@ ON t1.JOB_ID = t2.JOB_ID
 WHERE JOB_TITLE = cargo
 GROUP BY t2.JOB_TITLE;
 END $$
-
-
-
--- select * from hr.jobs;
--- select * from hr.employees;
-
--- SELECT ROUND(AVG(t1.SALARY), 2) AS Média , t2.JOB_TITLE
--- FROM hr.employees AS t1
--- INNER JOIN hr.jobs AS t2
--- ON t1.JOB_ID = t2.JOB_ID
--- WHERE JOB_TITLE = 'Programmer'
-
-

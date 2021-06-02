@@ -71,7 +71,7 @@ describe('Desafios iniciais', () => {
     });
   });
 
-  describe.only('5 - Exiba os cargos com sua variação salarial e suas médias máxima e mínima mensal, considerando salários máximo e minímo como anuais', () => {
+  describe('5 - Exiba os cargos com sua variação salarial e suas médias máxima e mínima mensal, considerando salários máximo e minímo como anuais', () => {
     it('Verifica o desafio 5', async () => {
       const challengeQuery = readFileSync('desafio5.sql', 'utf8').trim();
       const expectedResult = require('./challengesResults/challengeResult5');
@@ -89,7 +89,7 @@ describe('Desafios iniciais', () => {
     });
   });
 
-  describe.only('7 - Faça um relatório que mostra o **histórico de cargos das pessoas empregadas** que iniciaram seus cargos nos meses de janeiro, fevereiro ou março', () => {
+  describe('7 - Faça um relatório que mostra o **histórico de cargos das pessoas empregadas** que iniciaram seus cargos nos meses de janeiro, fevereiro ou março', () => {
     it('Verifica o desafio 7', async () => {
       const challengeQuery = readFileSync('desafio7.sql', 'utf8').trim();
       const expectedResult = require('./challengesResults/challengeResult7');
@@ -107,7 +107,7 @@ describe('Desafios iniciais', () => {
     });
   });
 
-  describe('15 - Crie uma procedure chamada `buscar_media_por_cargo` que recebe como parâmetro o nome de um cargo e em retorno deve mostrar a média salarial de todas as pessoas que possuem esse cargo', () => {
+  describe.only('15 - Crie uma procedure chamada `buscar_media_por_cargo` que recebe como parâmetro o nome de um cargo e em retorno deve mostrar a média salarial de todas as pessoas que possuem esse cargo', () => {
     it('Verifica o desafio 15', async () => {
       const challengeQuery = readFileSync('desafio15.sql', 'utf8').trim();
       const createProcedureQuery = /CREATE PROCEDURE.*END/si.exec(challengeQuery)[0];

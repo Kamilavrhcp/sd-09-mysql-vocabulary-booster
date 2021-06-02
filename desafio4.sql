@@ -11,6 +11,6 @@ FROM
   hr.jobs J
     INNER JOIN
   hr.employees E
-   ON J.JOB_ID = E.JOB_ID
+    ON J.JOB_ID = E.JOB_ID
 GROUP BY `Cargo`
 ORDER BY `Média Salarial`;

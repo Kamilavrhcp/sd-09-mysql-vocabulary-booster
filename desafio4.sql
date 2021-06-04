@@ -13,4 +13,4 @@ FROM
   hr.employees E
     ON J.JOB_ID = E.JOB_ID
 GROUP BY `Cargo`
-ORDER BY `Média Salarial`;
+ORDER BY `Média Salarial`, `Cargo`;

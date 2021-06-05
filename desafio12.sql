@@ -1,5 +1,3 @@
-SELECT * FROM hr.regions;
-
 SELECT 
     CONCAT(T1.FIRST_NAME, ' ', T1.LAST_NAME) AS 'Nome completo funcionário 1',
     T1.SALARY AS 'Salário funcionário 1',

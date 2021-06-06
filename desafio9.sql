@@ -6,4 +6,3 @@ INNER JOIN w3schools.orders AS o
 ON e.EmployeeID = o.EmployeeID
 GROUP BY `Nome completo`
 ORDER BY `Total de pedidos` ASC;
-    

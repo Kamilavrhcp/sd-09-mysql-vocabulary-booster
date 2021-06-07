@@ -1,0 +1,12 @@
+DELIMITER $$
+
+CREATE PROCEDURE buscar_media_por_cargo(IN cargo VARCHAR(100))
+BEGIN
+SELECT ROUND(AVG(t1.SALARY), 2) AS `Média salarial`
+FROM hr.employees AS t1
+WHERE EXISTS (
+SELECT t2.JOB_ID FROM hr.jobs AS t2
+WHERE t2.JOB_TITLE = cargo AND t1.JOB_ID = t2.JOB_ID
+);
+END
+DELIMITER ;

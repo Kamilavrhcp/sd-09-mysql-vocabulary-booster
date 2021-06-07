@@ -1,13 +1,14 @@
-SELECT
-DISTINCT CONCAT(employees.FIRST_NAME, ' ', employees.LAST_NAME) AS `Nome completo`,
-jobs.JOB_TITLE AS `Cargo`,
-jobHist.START_DATE AS `Data de início do cargo`,
-departments.DEPARTMENT_NAME AS `Departamento`
-FROM hr.job_history AS jobHist
-INNER JOIN hr.employees AS employees
-ON jobHist.JOB_ID = employees.JOB_ID
-INNER JOIN hr.jobs AS jobs
-ON jobHist.JOB_ID = jobs.JOB_ID
-INNER JOIN hr.departments AS departments
-ON jobHist.DEPARTMENT_ID = departments.DEPARTMENT_ID
-ORDER BY `Nome completo` DESC, Cargo ASC;
+SELECT 
+  CONCAT(E.FIRST_NAME, ' ', E.LAST_NAME) 'Nome completo',
+  J.JOB_TITLE 'Cargo',
+  H.START_DATE 'Data de início do cargo',
+  D.DEPARTMENT_NAME 'Departamento'
+FROM
+  hr.job_history H
+        INNER JOIN
+    hr.employees E ON H.EMPLOYEE_ID = E.EMPLOYEE_ID
+        INNER JOIN
+    hr.jobs J ON H.JOB_ID = J.JOB_ID
+        INNER JOIN
+    hr.departments D ON H.DEPARTMENT_id = D.DEPARTMENT_ID
+ORDER BY `Nome completo` DESC, `Cargo`;

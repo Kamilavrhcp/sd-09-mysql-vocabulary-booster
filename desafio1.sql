@@ -1,4 +1,4 @@
-SELECT
+
 SELECT 
     COUNTRY_NAME AS 'País',
     IF(REGION_ID = 1,

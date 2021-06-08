@@ -5,4 +5,5 @@ SELECT p.ProductName AS 'Produto',
 FROM w3schools.products AS p
   INNER JOIN w3schools.order_details AS od ON od.ProductID = p.ProductID
 GROUP BY 1
+HAVING `Média` > 20
 ORDER BY 3, 1;

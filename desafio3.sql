@@ -9,4 +9,4 @@ SELECT
     END AS `Senioridade`
 FROM hr.employees INNER JOIN hr.jobs ON hr.jobs.JOB_ID = hr.employees.JOB_ID
 GROUP BY hr.employees.JOB_ID
-ORDER BY `Média Salarial` ASC, `Cargo` ASC;
+ORDER BY `Média salarial` ASC, `Cargo` ASC;

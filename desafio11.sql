@@ -1,5 +1,5 @@
 SELECT
-    CustomerName AS `Nome`,
+    ContactName AS `Nome`,
     Country AS `País`,
     (SELECT COUNT(*) - 1
     FROM w3schools.customers

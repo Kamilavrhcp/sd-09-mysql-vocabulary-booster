@@ -1,5 +1,5 @@
 SELECT 
-    CONCAT(LastName, ' ', FirstName) AS 'Nome completo',
+    CONCAT(FirstName, ' ', LastName) AS 'Nome completo',
     COUNT(ord.EmployeeID) AS 'Total de pedidos'
 FROM
     w3schools.employees AS emp

@@ -15,14 +15,14 @@ Os resultados devem estar ordenados pelo nome completo das pessoas empregadas em
 
 Em caso de empate no nome completo, ordene os resultados pela data de início que a pessoa iniciou seu cargo, em ordem crescente. */
 
-SELECT
-	UCASE(CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME)) AS 'Nome completo',
+SELECT 
+    UCASE(CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME)) AS 'Nome completo',
     jh.START_DATE AS 'Data de início',
     e.SALARY AS 'Salário'
 FROM
-	hr.job_history AS jh
-		INNER JOIN
-	hr.employees AS e ON jh.EMPLOYEE_ID = e.EMPLOYEE_ID
+    hr.job_history AS jh
+        INNER JOIN
+    hr.employees AS e ON jh.EMPLOYEE_ID = e.EMPLOYEE_ID
 WHERE
-	MONTH(jh.START_DATE) IN (1, 2, 3)
-ORDER BY `Nome completo` ASC, `Data de início` ASC;
+    MONTH(jh.START_DATE) IN (1 , 2, 3)
+ORDER BY `Nome completo` ASC , `Data de início` ASC;

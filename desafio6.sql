@@ -17,11 +17,21 @@ Os resultados devem estar ordenados pelo nome completo das pessoas empregadas em
 
 Em caso de empate no nome completo, ordene os resultados pelo nome do cargo em ordem alfabética. */
 
-SELECT
-	CONCAT(FIRST_NAME, ' ', LAST_NAME) AS 'Nome completo',
-    (SELECT JOB_TITLE FROM hr.jobs WHERE JOB_ID = hr.employees.JOB_ID) AS Cargo,
+SELECT 
+    CONCAT(FIRST_NAME, ' ', LAST_NAME) AS 'Nome completo',
+    (SELECT 
+            JOB_TITLE
+        FROM
+            hr.jobs
+        WHERE
+            JOB_ID = hr.employees.JOB_ID) AS Cargo,
     HIRE_DATE AS 'Data de início do cargo',
-    (SELECT DEPARTMENT_NAME FROM hr.departments WHERE DEPARTMENT_ID = hr.employees.DEPARTMENT_ID) AS Departamento
+    (SELECT 
+            DEPARTMENT_NAME
+        FROM
+            hr.departments
+        WHERE
+            DEPARTMENT_ID = hr.employees.DEPARTMENT_ID) AS Departamento
 FROM
-	hr.employees
-ORDER BY CONCAT(FIRST_NAME, ' ', LAST_NAME) DESC, Cargo ASC;
+    hr.employees
+ORDER BY CONCAT(FIRST_NAME, ' ', LAST_NAME) DESC , Cargo ASC;

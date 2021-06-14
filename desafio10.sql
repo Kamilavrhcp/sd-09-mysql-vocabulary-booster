@@ -17,18 +17,18 @@ Os resultados devem estar ordenados pela média de quantidade nos pedidos em ord
 
 Em caso de empate na média, os resultados devem ser ordenados pelo nome do produto em ordem alfabética. */
 
-SELECT
-    (SELECT
-			ProductName
-		FROM
-			w3schools.products
-		WHERE
-			ProductID = w3schools.order_details.ProductID) AS Produto,
-	MIN(Quantity) AS 'Mínima',
+SELECT 
+    (SELECT 
+            ProductName
+        FROM
+            w3schools.products
+        WHERE
+            ProductID = w3schools.order_details.ProductID) AS Produto,
+    MIN(Quantity) AS 'Mínima',
     MAX(Quantity) AS 'Máxima',
     ROUND(AVG(Quantity), 2) AS 'Média'
 FROM
-	w3schools.order_details
+    w3schools.order_details
 GROUP BY Produto
 HAVING `Média` > 20
-ORDER BY `Média` ASC, Produto ASC;
+ORDER BY `Média` ASC , Produto ASC;

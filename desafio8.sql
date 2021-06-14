@@ -19,7 +19,7 @@ Se houver empresas com o mesmo nome, ordene os resultados pela data do pedido em
 
 SELECT 
     (SELECT 
-            CustomerName
+            ContactName
         FROM
             w3schools.customers
         WHERE

@@ -17,22 +17,22 @@ Em caso de empate no nome de contato, ordene os resultados pelo nome da empresa 
 
 Se houver empresas com o mesmo nome, ordene os resultados pela data do pedido em ordem crescente. */
 
-SELECT
-    (SELECT
-        CustomerName
-	FROM
-        w3schools.customers
-	WHERE
-        CustomerID = w3schools.orders.CustomerID) AS 'Nome de contato',
-	(SELECT
-        ShipperName
-	FROM
-        w3schools.shippers
-	WHERE
-        ShipperID = w3schools.orders.ShipperID) AS 'Empresa que fez o envio',
-	OrderDate AS 'Data do pedido'
+SELECT 
+    (SELECT 
+            CustomerName
+        FROM
+            w3schools.customers
+        WHERE
+            CustomerID = w3schools.orders.CustomerID) AS 'Nome de contato',
+    (SELECT 
+            ShipperName
+        FROM
+            w3schools.shippers
+        WHERE
+            ShipperID = w3schools.orders.ShipperID) AS 'Empresa que fez o envio',
+    OrderDate AS 'Data do pedido'
 FROM
     w3schools.orders
 WHERE
-    ShipperID IN (1, 2)
-ORDER BY `Nome de contato` ASC, `Empresa que fez o envio` ASC, `Data do pedido` ASC;
+    ShipperID IN (1 , 2)
+ORDER BY `Nome de contato` ASC , `Empresa que fez o envio` ASC , `Data do pedido` ASC;

@@ -7,14 +7,14 @@ Confirme que sua função retorna o valor 2 ao ser chamada passando uma pessoa f
 
 USE hr;
 DELIMITER $$
--- DROP FUNCTION hr.buscar_quantidade_de_empregos_por_funcionario $$
+
 CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario(email VARCHAR(20))
 RETURNS INT READS SQL DATA
 BEGIN
   DECLARE total INT;
   SELECT COUNT(*) AS total_empregos
-  FROM job_history
-  WHERE EMPLOYEE_ID IN (SELECT EMPLOYEE_ID FROM employees WHERE EMAIL = email)
+  FROM job_history AS jh INNER JOIN employees AS e ON jh.EMPLOYEE_ID = e.EMPLOYEE_ID
+  WHERE e.EMAIL = email
   INTO total;
   RETURN total;
 END $$

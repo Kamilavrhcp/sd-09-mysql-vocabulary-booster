@@ -14,6 +14,9 @@ FROM
     hr.employees AS employees2
 WHERE
     hr.employees.JOB_ID = employees2.JOB_ID
-        AND hr.employees.FIRST_NAME <> employees2.FIRST_NAME
-        AND hr.employees.LAST_NAME <> employees2.LAST_NAME
+        AND CONCAT(hr.employees.FIRST_NAME,
+            ' ',
+            hr.employees.LAST_NAME) <> CONCAT(employees2.FIRST_NAME,
+            ' ',
+            employees2.LAST_NAME)
 ORDER BY `Nome completo funcionário 1`, `Nome completo funcionário 2`;

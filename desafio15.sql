@@ -1,13 +1,13 @@
 USE hr;
-
 DELIMITER //
-CREATE PROCEDURE buscar_media_por_cargo(IN job_title_parameter VARCHAR(35))
+
+CREATE PROCEDURE buscar_media_por_cargo(IN cargo VARCHAR(50))
 BEGIN
-    SELECT AVG(SALARY) AS `Média salarial`
-        FROM hr.employees
-        JOIN hr.jobs ON hr.employees.JOB_ID = hr.jobs.JOB_ID
-        WHERE JOB_TITLE = job_title_parameter;
+  SELECT ROUND(AVG(hr.employees.SALARY), 2) AS 'Média salarial'
+  FROM hr.employees INNER JOIN hr.jobs ON hr.employees.JOB_ID = hr.jobs.JOB_ID
+  WHERE hr.jobs.JOB_TITLE = cargo;
 END //
+
 DELIMITER ;
 
 CALL buscar_media_por_cargo('Programmer');

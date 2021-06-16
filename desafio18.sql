@@ -12,6 +12,4 @@ FROM
     hr.job_history
 WHERE
     START_DATE > 0
-ORDER BY Nome completo , Anos trabalhados
-
-SELECT DATE_FORMAT('2017-06-15', '%d/%m%Y')
+ORDER BY `Nome completo`, `Anos trabalhados`;

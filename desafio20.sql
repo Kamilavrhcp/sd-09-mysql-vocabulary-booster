@@ -5,8 +5,8 @@ CREATE PROCEDURE exibir_historico_completo_por_funcionario(IN emp_mail VARCHAR(5
 BEGIN
 SELECT 
 CONCAT(emp.FIRST_NAME, ' ', emp.LAST_NAME) AS 'Nome completo',
-        dep.DEPARTMENT_NAME AS 'Departamento',
-      	jb.JOB_TITLE AS 'Cargo'
+dep.DEPARTMENT_NAME AS 'Departamento',
+jb.JOB_TITLE AS 'Cargo'
 FROM
 hr.employees AS emp
     INNER JOIN

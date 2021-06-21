@@ -1,13 +1,11 @@
-SELECT    jobs.JOB_TITLE AS 'Cargo',
-          ROUND(AVG(employees.SALARY), 2) AS 'Média salarial',
-  CASE
-    WHEN  AVG(employees.SALARY) BETWEEN 2000 AND 5800 THEN 'Júnior'
-    WHEN  AVG(employees.SALARY) < 7500 THEN 'Pleno'
-    WHEN  AVG(employees.SALARY) < 10500 THEN 'Sênior'
-    ELSE  'CEO'
-  END AS 'Senioridade'
-FROM  hr.jobs
-JOIN  hr.employees ON jobs.JOB_ID = employees.JOB_ID
-GROUP BY jobs.JOB_TITLE
-ORDER BY  AVG(employees.SALARY),
-          jobs.JOB_TITLE;
+USE w3schools;
+DELIMITER $$
+
+CREATE TRIGGER update_order_date
+BEFORE INSERT ON w3schools.orders
+FOR EACH ROW
+BEGIN
+SET NEW.OrderDate = NOW();
+END $$
+
+DELIMITER ;

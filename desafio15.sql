@@ -1,5 +1,6 @@
+USE hr;
 DELIMITER $$
-CREATE PROCEDURE buscar_media_por_cargo(in cargo varchar(100))
+CREATE PROCEDURE buscar_media_por_cargo(in cargo varchar(50))
 BEGIN
 SELECT 
 ROUND(AVG(e.SALARY), 2) AS 'Média salarial'

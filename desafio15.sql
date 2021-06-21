@@ -1,8 +1,11 @@
-SELECT  jobs.JOB_TITLE AS 'Cargo',
-CASE  WHEN jobs.MAX_SALARY BETWEEN 5000 AND 10000 THEN 'Baixo'
-      WHEN jobs.MAX_SALARY <= 20000 THEN 'Médio'
-      WHEN jobs.MAX_SALARY <= 30000 THEN 'Alto'
-      ELSE 'Altíssimo'
-END AS 'Nível'
-FROM hr.jobs
-ORDER BY jobs.JOB_TITLE;
+USE hr;
+DELIMITER $$
+
+CREATE PROCEDURE buscar_media_por_cargo(IN cargo VARCHAR(50))
+BEGIN
+SELECT TRUNCATE(AVG(SALARY), 2) AS 'Média salarial' FROM hr.employees AS t1
+INNER JOIN hr.jobs AS t2 ON t1.job_id = t2.job_id
+WHERE t2.job_title = cargo;
+END $$
+
+DELIMITER ;

@@ -11,5 +11,4 @@ BEGIN
     ON j.JOB_ID = e.JOB_ID 
     WHERE JOB_TITLE = job_name;
 END $$
-
 DELIMITER ;

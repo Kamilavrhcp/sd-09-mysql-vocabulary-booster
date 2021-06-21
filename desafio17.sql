@@ -2,10 +2,10 @@ USE w3schools;
 
 DELIMITER $$
 CREATE TRIGGER insert_info
-	BEFORE UPDATE ON orders
+BEFORE UPDATE ON orders
     FOR EACH ROW
 BEGIN
-	SET NEW.orderDate = DATE(NOW());
+SET NEW.orderDate = DATE(NOW());
 END $$
 
 DELIMITER ;

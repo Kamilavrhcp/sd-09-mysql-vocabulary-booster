@@ -1,11 +1,11 @@
 USE w3schools;
 
 DELIMITER $$
-CREATE TRIGGER insert_info
-BEFORE UPDATE ON orders
+CREATE TRIGGER insert_innfo
+BEFORE INSERT ON orders
     FOR EACH ROW
 BEGIN
-SET NEW.OrderDate = DATE(NOW());
+SET NEW.OrderDate = NOW();
 END $$
 
 DELIMITER ;

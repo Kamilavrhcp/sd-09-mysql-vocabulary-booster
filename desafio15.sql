@@ -9,6 +9,9 @@ INNER JOIN jobs AS j
 ON j.JOB_ID = e.JOB_ID 
 WHERE JOB_TITLE = job_name;
 END $$
+
 DELIMITER ;
 /*Consultei o código do colega Kevin Fraga para
 entender o uso da sintaxe do stored procedure no projeto*/
+
+CALL buscar_media_por_cargo('Programmer');
